@@ -16,7 +16,7 @@ public class PasswordEntry {
         this.dateStored = LocalDateTime.now();
         this.notes = notes;
     }
-
+    //meow
     // TODO: Add getters and setters for each field
     // TODO: Add a method to validate the password according to the rules
 }
