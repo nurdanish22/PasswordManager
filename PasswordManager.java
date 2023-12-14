@@ -30,5 +30,20 @@ public class PasswordManager { // Nurdanish (2224875)
         }
     }
 
-    // TODO: Add methods to add and retrieve entries
+    public void addEntry(PasswordEntry entry) { // Nurdanish (2224875)
+        this.passwordEntries.add(entry);
+    }
+
+    public PasswordEntry getEntry(String url){ //This is to retrieve an entry by its url. Nurdanish (2224875)
+        for (PasswordEntry entry : this.passwordEntries) {
+            if (entry.getUrl().equals(url)) {
+            return entry;
+            }
+        }
+        return null; // If no entry is found, return null
+    }
+
+    public ArrayList<PasswordEntry> getAllEntries() { // Nurdanish (2224875)
+        return new ArrayList<>(this.passwordEntries); // Return a copy of the passwordEntries ArrayList to ensure that the original ArrayList is not modified (encapsulation)
+    }
 }
