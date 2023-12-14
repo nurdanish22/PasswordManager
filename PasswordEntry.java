@@ -15,14 +15,13 @@ public class PasswordEntry { //
     public PasswordEntry(String url, String login, String password, String notes) { // Constructor method.
         this.url = url;
         this.login = login;
-        this.password = password;
+        setPassword(password); //Validate password before setting it
         this.dateStored = LocalDateTime.now();
         this.notes = notes;
     }
 
     
-
-    // Getters //catto & izzu
+    // Getters by catto & izzu
     public String getUrl() {
         return url;
     }
@@ -43,7 +42,7 @@ public class PasswordEntry { //
         return notes;
     }
 
-    // Setters
+    // Setters by Catto and Izzu
     public void setUrl(String url) {
         this.url = url;
     }
@@ -52,26 +51,27 @@ public class PasswordEntry { //
         this.login = login;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPassword(String password) { //This method is to ensure that the password is valid before setting it.
+        ValidationResult result = validatePassword(password); 
+        if (result.isValid()) {
+            this.password = password;
+        } else {
+            throw new IllegalArgumentException("Invalid password: " + result.getMessage()); //This throws an exception if the password is invalid
+        }
     }
- 
-    
-
+  
     public void setNotes(String notes) {
         this.notes = notes;
     }
 
-  
-    public String display(int stored_pass, int update_pass, int view_pass, int exit){
-        
+    public String display(){
+        return "URL: " + url + "\n" +
+                "Login: " + login + "\n" +
+                "Password: " + password + "\n" +
+                "Date Stored: " + dateStored + "\n" +
+                "Notes: " + notes + "\n";
 
     }
-
-    public void 
-    
- 
-
 
     //catto 
     public static ValidationResult validatePassword(String password) {
@@ -88,7 +88,6 @@ public class PasswordEntry { //
         return result;
     }
         
-
     //catto
     public static class ValidationResult{
 
@@ -107,8 +106,6 @@ public class PasswordEntry { //
     public String getMessage(){
         return message;
     }
-
-
 
     }
 }
