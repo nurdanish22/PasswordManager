@@ -1,7 +1,8 @@
 package PasswordManager;
 
 import java.time.LocalDateTime;
-
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 public class PasswordEntry { // 
     private String url;
     private String login;
@@ -62,7 +63,12 @@ public class PasswordEntry { //
     }
 
   
+    public String display(int stored_pass, int update_pass, int view_pass, int exit){
+        
 
+    }
+
+    public void 
     
  
 
@@ -77,7 +83,7 @@ public class PasswordEntry { //
     if (matcher.matches()){
         result = new ValidationResult(true, "Password is valid.");
     }else {
-        result = new ValidationResult(false, "Password is invalid. It must be at least 12 character long and contain at least one symbols");
+        result = new ValidationResult(false, "It must be at least 12 character long and contain at least one symbols");
     }
         return result;
     }
