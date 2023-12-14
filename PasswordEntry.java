@@ -2,14 +2,14 @@ package PasswordManager;
 
 import java.time.LocalDateTime;
 
-public class PasswordEntry {
+public class PasswordEntry { // 
     private String url;
     private String login;
     private String password;
     private LocalDateTime dateStored;
     private String notes;
 
-    public PasswordEntry(String url, String login, String password, String notes) {
+    public PasswordEntry(String url, String login, String password, String notes) { // Constructor method.
         this.url = url;
         this.login = login;
         this.password = password;
@@ -64,10 +64,10 @@ public class PasswordEntry {
         
     }
 
-    private static boolean condition(String userPassword){
+    private static boolean condition(String password){
 
         String rules = "^(?=.*[@#$%^&+=])([a-zA-Z0-9@#$%^&+=]*)$";
-        return Rules.matches(Rules, password);
+        return password.matches(rules);
         
     }
 

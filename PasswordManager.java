@@ -6,16 +6,16 @@ import java.security.NoSuchAlgorithmException; //This is to check if the algorit
 import java.nio.charset.StandardCharsets; //This is to convert the password to bytes
 import java.math.BigInteger; //This is to convert the bytes to a BigInteger
 
-public class PasswordManager {
+public class PasswordManager { // Nurdanish (2224875)
     private ArrayList<PasswordEntry> passwordEntries;
     private String hashedMasterPassword;
 
-    public PasswordManager(String masterPassword) {
+    public PasswordManager(String masterPassword) { // Constructor method. Nurdanish (2224875)
         this.passwordEntries = new ArrayList<>();
         this.hashedMasterPassword = hashPassword(masterPassword);
     }
 
-    private String hashPassword(String password) {
+    private String hashPassword(String password) { // Nurdanish (2224875)
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-512"); //This is the hashing algorithm
             byte[] messageDigest = md.digest(password.getBytes(StandardCharsets.UTF_8)); //This converts the password to bytes and hashes it
