@@ -68,7 +68,7 @@ public class PasswordEntry { //
 
 
     //catto 
-    private static ValidationResult validatePassword(String password) {
+    public static ValidationResult validatePassword(String password) {
 
     Pattern regex = Pattern.compile(PASSWORD_PATTERN);
     Matcher matcher = regex.matcher(password);
@@ -84,7 +84,7 @@ public class PasswordEntry { //
         
 
     //catto
-    class ValidationResult{
+    public static class ValidationResult{
 
     private boolean valid;
     private String message;
@@ -105,5 +105,4 @@ public class PasswordEntry { //
 
 
     }
-
 }
