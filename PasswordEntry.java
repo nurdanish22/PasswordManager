@@ -8,6 +8,8 @@ public class PasswordEntry { //
     private String password;
     private LocalDateTime dateStored;
     private String notes;
+    private static final String PASSWORD_PATTERN = "^(?=.*[@#$%])[a-zA-Z0-9@#$%]{12,}$";
+
 
     public PasswordEntry(String url, String login, String password, String notes) { // Constructor method.
         this.url = url;
@@ -17,7 +19,9 @@ public class PasswordEntry { //
         this.notes = notes;
     }
 
-    // Getters
+    
+
+    // Getters //catto & izzu
     public String getUrl() {
         return url;
     }
@@ -50,28 +54,56 @@ public class PasswordEntry { //
     public void setPassword(String password) {
         this.password = password;
     }
-
+ 
     
 
     public void setNotes(String notes) {
         this.notes = notes;
     }
 
-    public String passwordRequirement(String password){
-       
-        
-
-        
-    }
-
-    private static boolean condition(String password){
-
-        String rules = "^(?=.*[@#$%^&+=])([a-zA-Z0-9@#$%^&+=]*)$";
-        return password.matches(rules);
-        
-    }
+  
 
     
-    // TODO: Add getters and setters for each field
-    // TODO: Add a method to validate the password according to the rules
+ 
+
+
+    //catto 
+    private static ValidationResult validatePassword(String password) {
+
+    Pattern regex = Pattern.compile(PASSWORD_PATTERN);
+    Matcher matcher = regex.matcher(password);
+    ValidationResult result;
+
+    if (matcher.matches()){
+        result = new ValidationResult(true, "Password is valid.");
+    }else {
+        result = new ValidationResult(false, "Password is invalid. It must be at least 12 character long and contain at least one symbols");
+    }
+        return result;
+    }
+        
+
+    //catto
+    class ValidationResult{
+
+    private boolean valid;
+    private String message;
+
+    public ValidationResult(boolean valid, String message) {
+        this.valid = valid;
+        this.message = message;
+    }   
+
+    public boolean isValid(){
+        return valid;
+    }
+
+    public String getMessage(){
+        return message;
+    }
+
+
+
+    }
+
 }
