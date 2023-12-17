@@ -51,6 +51,7 @@ public class PasswordEntry { //
         this.login = login;
     }
 
+    //catto
     public void setPassword(String password) { //This method is to ensure that the password is valid before setting it.
         ValidationResult result = validatePassword(password); 
         if (result.isValid()) {
@@ -59,6 +60,9 @@ public class PasswordEntry { //
             throw new IllegalArgumentException("Invalid password: " + result.getMessage()); //This throws an exception if the password is invalid
         }
     }
+
+   
+
   
     public void setNotes(String notes) {
         this.notes = notes;
@@ -108,4 +112,5 @@ public class PasswordEntry { //
     }
 
     }
+    
 }
