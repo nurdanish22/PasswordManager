@@ -83,7 +83,8 @@ public class PasswordEntry { //
     Pattern regex = Pattern.compile(PASSWORD_PATTERN);
     Matcher matcher = regex.matcher(password);
     ValidationResult result;
-
+    
+    
     if (matcher.matches()){
         result = new ValidationResult(true, "Password is valid.");
     }else {
