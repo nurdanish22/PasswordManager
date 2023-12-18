@@ -20,7 +20,7 @@ public class PasswordEntry { //
         this.notes = notes;
     }
 
-    
+
     // Getters by catto & izzu
     public String getUrl() {
         return url;
@@ -61,9 +61,9 @@ public class PasswordEntry { //
         }
     }
 
-   
 
-  
+
+
     public void setNotes(String notes) {
         this.notes = notes;
     }
@@ -83,8 +83,8 @@ public class PasswordEntry { //
     Pattern regex = Pattern.compile(PASSWORD_PATTERN);
     Matcher matcher = regex.matcher(password);
     ValidationResult result;
-    
-    
+
+
     if (matcher.matches()){
         result = new ValidationResult(true, "Password is valid.");
     }else {
@@ -92,7 +92,7 @@ public class PasswordEntry { //
     }
         return result;
     }
-        
+
     //catto
     public static class ValidationResult{
 
@@ -113,5 +113,5 @@ public class PasswordEntry { //
     }
 
     }
-    
+
 }

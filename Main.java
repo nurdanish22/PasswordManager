@@ -2,21 +2,14 @@ package PasswordManager;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+
 import PasswordManager.PasswordEntry.ValidationResult;
 
 public class Main {
     public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
-        String jdbcUrl = "jdbc:sqlite:C:\\Users\\Lenovo\\OneDrive\\Documents\\SQLite\\PasswordManager.db"; //This is the path to the database
-        try {
-             Connection connection = DriverManager.getConnection(jdbcUrl); //This creates the database
-        } catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
-            e.printStackTrace();
-        }
+
         System.out.println("Enter a master password: ");
         String masterpassword = input.nextLine(); // Correct the variable name and use nextLine()
 
