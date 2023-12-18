@@ -47,3 +47,4 @@ public class PasswordManager { // Nurdanish (2224875)
         return new ArrayList<>(this.passwordEntries); // Return a copy of the passwordEntries ArrayList to ensure that the original ArrayList is not modified (encapsulation)
     }
 } //i like men
+//nicholas cage
