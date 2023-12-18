@@ -2,18 +2,18 @@
 
 ## Group name: OOPsies     
 
-**Description**: *The Password Manager application is designed to securely store and manage website passwords. Developed by a team of contributors (indicated by their respective names in the comments), the application ensures a robust and user-friendly password management experience.*
+**Description**: *The Password Manager application is designed to securely store and manage website passwords. Developed by a team of contributors, which includes Nurdanish, Afiq and Izzu, the application ensures a robust and user-friendly password management experience.*
 
 ## Group members: 
 
-**Name:  Afiq danish bin mohamad zulkefli**
+**Name:  Afiq Danish bin Mohamad Zulkefli**
 **Matric No: 2228775**
 
 **Name: Nurdanish Effendi bin Roestam Effendi**
 **Matric No: 2224875**
 
 **Name: Izzuddin Nurasheed bin Abd Rashid**
-**Matric No**
+**Matric No: 2226833**
 
 ## The assigned tasks for each member: 
 
@@ -31,7 +31,7 @@
 Debug and fix any issues that arise.
 
 
-# Name: Afiq danish 
+# Name: Afiq Danish 
 
 - Collaborate on developing the class responsible for handling individual passwords, ensuring encapsulation
 
