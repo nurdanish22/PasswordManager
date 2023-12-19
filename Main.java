@@ -111,12 +111,10 @@ public class Main {
                     break;
                 
                 case 4: // Generate a strong password. Izzuddin (2226833)
-                    //update the method
-
-
-
-
-
+                    PasswordGenerator generator = new PasswordGenerator();
+                    String randomPassword = generator.generatePassword();
+                    System.out.println("Your new password is: " + randomPassword);
+                    break;
                 
                 case 5: // Exit the program. Nurdanish (2224875)
                     System.out.println("Exiting...");
