@@ -114,6 +114,9 @@ public class Main {
                     PasswordGenerator generator = new PasswordGenerator();
                     String randomPassword = generator.generatePassword();
                     System.out.println("Your new password is: " + randomPassword);
+                    System.out.println("Password generated successfully.");
+                    System.out.println("Please note that the generated password is not saved in the password manager.");
+                    System.out.println("Please copy the password and paste it in the password manager.");
                     break;
                 
                 case 5: // Exit the program. Nurdanish (2224875)
