@@ -35,9 +35,9 @@ Debug and fix any issues that arise.
 
 - Collaborate on developing the class responsible for handling individual passwords, ensuring encapsulation
 
-- Work on the methods related to adding, retrieving, and updating password information as well as validating them in the individual password class.
+- Work on the methods related to adding, retrieving, and updating password information in the individual password class.
 
-- Collaborate on implementing error checking for password validation in the overall system and the individual password class.
+- Work on implementing error checking for password validation in the overall system and the individual password class.
 
 - Collaborate to incorporate date and time features wherever necessary in the other classes.
 
@@ -48,7 +48,7 @@ Debug and fix any issues that arise.
 
 - Collaborate on developing the class responsible for handling individual passwords, ensuring encapsulation.
 
-- Jointly manage the ArrayList or Array for storing passwords in the PasswordManager class.
+- Jointly manage the ArrayList or Array for storing passwords in the PasswordManager class and adding the PasswordGenerator class as an extra feature for the program.
 
 - Collaborate on implementing error checking for password validation in the overall system and the individual password class.
 
