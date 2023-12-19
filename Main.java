@@ -112,12 +112,11 @@ public class Main {
                 
                 case 4: // Generate a strong password. Izzuddin (2226833)
                     //update the method
-
-
-
-
-
-                
+                    System.out.print("Your password that is randomly generated is :" + passwordGenerator.generatePassword() + "\n");
+                    System.out.println("Password generated successfully.");
+                    System.out.println("Please note that the generated password is not saved in the password manager.");
+                    System.out.println("Please copy the password and paste it in the password manager.");
+                    break;
                 case 5: // Exit the program. Nurdanish (2224875)
                     System.out.println("Exiting...");
                     input.close();
