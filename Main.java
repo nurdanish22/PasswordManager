@@ -13,13 +13,15 @@ public class Main {
         System.out.println("Enter a master password: ");
         String masterpassword = input.nextLine(); // Correct the variable name and use nextLine()
 
-        PasswordManager passwordManager = new PasswordManager(masterpassword);
+        PasswordManager passwordManager = new PasswordManager(masterpassword); // This is to create a new PasswordManager object. 
+        PasswordGenerator passwordGenerator = new PasswordGenerator(); // This is to create a new PasswordGenerator object.
 
         while (true) { // Main Menu that runs as long as the user does not exit the program. Nurdanish (2224875)
             System.out.println("1. Add a password");
             System.out.println("2. Retrieve a password");
             System.out.println("3. Update a password");
-            System.out.println("4. Exit");
+            System.out.println("4. Generate a strong password");
+            System.out.println("5. Exit");
 
             int choice = 0;
             try {
@@ -91,38 +93,15 @@ public class Main {
                         String answer = input.nextLine();
                         if (answer.equalsIgnoreCase("y")) {
                             // Update the password
-                            System.out.print("Would you like to add your own password or generate a random password? (add/generate): ");//Izzuddin (2226833) 
-                            answer = input.nextLine();
-                            if (answer.equalsIgnoreCase("add")) {
-                                System.out.print("Enter the new password for the website: ");//Add the user's own password that the user wants to add. Izzuddin (2226833)
-                                password = input.nextLine();
-                                result = PasswordEntry.validatePassword(password); // Initialize the result variable
-
-                                while (!result.isValid()) {
-                                    // Validate the password before adding it
-                                    System.out.println("Invalid password: " + result.getMessage()); // Display the error message
-                                    System.out.print("Enter the password for the website: ");
-                                    password = input.nextLine();
-                                    try {
-                                        result = PasswordEntry.validatePassword(password); // Validate the password again
-                                    } catch (IllegalArgumentException e) {
-                                        // Catch the exception and display an error message
-                                        System.out.println("Invalid password: " + e.getMessage());
-                                    }
-                                }
-                            } else if (answer.equalsIgnoreCase("generate")) { //Generate a random password. Izzuddin (2226833)
-                                PasswordGenerator generator = new PasswordGenerator();
-                                password = generator.generatePassword();
-                                System.out.println("The generated password is: " + password);
-                                System.out.println("Please note that the generated password is not saved in the password manager.");//Izzuddin (2226833)
-                            } else if (answer.equalsIgnoreCase("n")) {
-                                System.out.println("No changes made to the password entry.");
-                                break;
-                            } else {
-                                System.out.println("Invalid choice. Please enter add or generate.");
-                                break;
+                            System.out.print("Enter the new password for the website: ");
+                            password = input.nextLine();
+                            try {
+                                entry.setPassword(password);
+                                System.out.println("Password entry updated successfully.");
+                            } catch (IllegalArgumentException e) {
+                                // Catch the exception and display an error message
+                                System.out.println("Invalid password: " + e.getMessage());
                             }
-                            System.out.println("Password updated successfully.");
                         } else {
                             System.out.println("No changes made to the password entry.");
                         }
@@ -130,8 +109,16 @@ public class Main {
                         System.out.println("No password entry found for " + url + ".");
                     }
                     break;
+                
+                case 4: // Generate a strong password. Izzuddin (2226833)
+                    //update the method
 
-                case 4: // Exit the program. Nurdanish (2224875)
+
+
+
+
+                
+                case 5: // Exit the program. Nurdanish (2224875)
                     System.out.println("Exiting...");
                     input.close();
                     System.exit(0);
