@@ -25,7 +25,7 @@
 
 - Take care of hashing passwords using SHA512 in the PasswordManager class.
 
--Implement date and time functionality in the PasswordManager class.
+- Implement date and time functionality in the PasswordManager class.
 
 - Test the functionality of the password manager thoroughly.
 Debug and fix any issues that arise.
@@ -35,7 +35,7 @@ Debug and fix any issues that arise.
 
 - Collaborate on developing the class responsible for handling individual passwords, ensuring encapsulation
 
-- Work on the methods related to adding, retrieving, and updating password information in the individual password class.
+- Work on the methods related to adding, retrieving, and updating password information as well as validating them in the individual password class.
 
 - Collaborate on implementing error checking for password validation in the overall system and the individual password class.
 
