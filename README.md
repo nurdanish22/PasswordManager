@@ -25,7 +25,7 @@
 
 - Take care of hashing passwords using SHA512 in the PasswordManager class.
 
--Implement date and time functionality in the PasswordManager class.
+- Implement date and time functionality in the PasswordManager class.
 
 - Test the functionality of the password manager thoroughly.
 Debug and fix any issues that arise.
@@ -37,7 +37,7 @@ Debug and fix any issues that arise.
 
 - Work on the methods related to adding, retrieving, and updating password information in the individual password class.
 
-- Collaborate on implementing error checking for password validation in the overall system and the individual password class.
+- Work on implementing error checking for password validation in the overall system and the individual password class.
 
 - Collaborate to incorporate date and time features wherever necessary in the other classes.
 
@@ -48,7 +48,7 @@ Debug and fix any issues that arise.
 
 - Collaborate on developing the class responsible for handling individual passwords, ensuring encapsulation.
 
-- Jointly manage the ArrayList or Array for storing passwords in the PasswordManager class.
+- Jointly manage the ArrayList or Array for storing passwords in the PasswordManager class and adding the PasswordGenerator class as an extra feature for the program.
 
 - Collaborate on implementing error checking for password validation in the overall system and the individual password class.
 
@@ -57,7 +57,11 @@ Debug and fix any issues that arise.
 - Test the functionality of the password manager thoroughly.
 Debug and fix any issues that arise.
 
+## Outstanding Source(s) for the Case Study
 
+[Java SHA 512 Hash with Salt Example](https://www.javaguides.net/2020/02/java-sha-512-hash-with-salt-example.html)
+
+## Class Diagram of the Password Manager
 
 [Class diagram](https://docs.google.com/document/d/152oTLROKgamGHCiuh446cFzVv5dsuFzF82SR7t__Bww/edit?usp=sharing)
 
