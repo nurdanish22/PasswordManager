@@ -118,7 +118,6 @@ public class Main {
                     System.out.println("Please note that the generated password is not saved in the password manager.");
                     System.out.println("Please copy the password and paste it in the password manager.");
                     break;
-                
                 case 5: // Exit the program. Nurdanish (2224875)
                     System.out.println("Exiting...");
                     input.close();
