@@ -61,7 +61,7 @@ Debug and fix any issues that arise.
 
 [Java SHA 512 Hash with Salt Example](https://www.javaguides.net/2020/02/java-sha-512-hash-with-salt-example.html)
 
-
+## Class Diagram of the Password Manager
 
 [Class diagram](https://docs.google.com/document/d/152oTLROKgamGHCiuh446cFzVv5dsuFzF82SR7t__Bww/edit?usp=sharing)
 
