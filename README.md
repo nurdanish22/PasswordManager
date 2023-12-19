@@ -67,6 +67,6 @@ Debug and fix any issues that arise.
 
 ## EXTRA | An Overview of the Case Study
 
-[Class diagram](https://docs.google.com/document/d/1HFAFOEhmk_8Psh4iIoJWRh0PRFzy6kR42hrNUK7_DZM/edit?usp=sharing)
+[Case Study: PASSWORD MANAGER](https://docs.google.com/document/d/1HFAFOEhmk_8Psh4iIoJWRh0PRFzy6kR42hrNUK7_DZM/edit?usp=sharing)
 
                 
