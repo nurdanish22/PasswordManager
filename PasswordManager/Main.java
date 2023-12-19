@@ -114,22 +114,7 @@ public class Main {
                                 PasswordGenerator generator = new PasswordGenerator();
                                 password = generator.generatePassword();
                                 System.out.println("The generated password is: " + password);
-                                System.out.println("Would you like to use this password? (y/n)");
-                                answer = input.nextLine();
-                                if (answer.equalsIgnoreCase("y")) {
-                                    // Update the password
-                                    entry.setPassword(password);
-                                    
-                                    System.out.println("Password updated successfully.");
-                                    break;
-                                } else if (answer.equalsIgnoreCase("n")) {
-                                    System.out.println("No changes made to the password entry.");
-                                    break;
-                                } else {
-                                    System.out.println("Invalid choice. Please enter y or n.");
-
-                                    break;
-                                }
+                                System.out.println("Please note that the generated password is not saved in the password manager.");//Izzuddin (2226833)
                             } else if (answer.equalsIgnoreCase("n")) {
                                 System.out.println("No changes made to the password entry.");
                                 break;
