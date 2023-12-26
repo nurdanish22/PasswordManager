@@ -3,9 +3,7 @@ package PasswordManager;
 import java.time.LocalDateTime; // This is to get the current date and time
 import java.util.regex.Matcher; // This is to use regex for password validation
 import java.util.regex.Pattern; // This is to use regex for password validation
-import java.security.MessageDigest;
-import java.nio.charset.StandardCharsets;
-import java.math.BigInteger;
+
 
 public class PasswordEntry {
     private String url;
