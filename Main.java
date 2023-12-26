@@ -16,6 +16,9 @@ public class Main {
         PasswordManager passwordManager = new PasswordManager(masterpassword); // This is to create a new PasswordManager object. 
         PasswordGenerator passwordGenerator = new PasswordGenerator(); // This is to create a new PasswordGenerator object.
 
+        System.out.println("Your master password is: " + masterpassword);
+        System.out.println("Your hashed master password is: " + passwordManager.getHashedMasterPassword());
+
         while (true) { // Main Menu that runs as long as the user does not exit the program. Nurdanish (2224875)
             System.out.println("1. Add a password");
             System.out.println("2. Retrieve a password");

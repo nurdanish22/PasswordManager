@@ -3,6 +3,10 @@ package PasswordManager;
 import java.time.LocalDateTime; // This is to get the current date and time
 import java.util.regex.Matcher; // This is to use regex for password validation
 import java.util.regex.Pattern; // This is to use regex for password validation
+import java.security.MessageDigest;
+import java.nio.charset.StandardCharsets;
+import java.math.BigInteger;
+
 public class PasswordEntry {
     private String url;
     private String login;
@@ -10,6 +14,7 @@ public class PasswordEntry {
     private LocalDateTime dateStored;
     private String notes;
     private static final String PASSWORD_PATTERN = "^(?=.*[@#$%])[a-zA-Z0-9@#$%]{12,}$";
+    private String hashedPassword;
 
 
     public PasswordEntry(String url, String login, String password, String notes) { // This is the constructor method for the PasswordEntry class. Afiq (2228775)
@@ -18,8 +23,8 @@ public class PasswordEntry {
         setPassword(password); //Validate password before setting it
         this.dateStored = LocalDateTime.now();
         this.notes = notes;
+        this.hashedPassword = PasswordManager.hashPassword(password);
     }
-
 
     // Getters. Afiq (2228775) and Izzu (2226833)
     public String getUrl() {
@@ -42,6 +47,10 @@ public class PasswordEntry {
         return notes;
     }
 
+    public String getHashedPassword() {
+        return hashedPassword;
+    }
+
     // Setters. Afiq (2228775) and Izzu (2226833)
     public void setUrl(String url) {
         this.url = url;
@@ -50,7 +59,7 @@ public class PasswordEntry {
     public void setLogin(String login) {
         this.login = login;
     }
-
+    
     public void setPassword(String password) { //This method is to ensure that the password is valid before setting it. Afiq (2228775)
         ValidationResult result = validatePassword(password); 
         if (result.isValid()) {
@@ -65,11 +74,12 @@ public class PasswordEntry {
     }
 
     public String display(){ // This is to display the password entry. Afiq (2228775)
-        return "URL: " + url + "\n" +
-                "Login: " + login + "\n" +
-                "Password: " + password + "\n" +
-                "Date Stored: " + dateStored + "\n" +
-                "Notes: " + notes + "\n";
+        return "URL: " + getUrl() + "\n" +
+                "Login: " + getLogin() + "\n" +
+                "Original Password: " + getPassword() + "\n" +
+                "Hashed Password: " + getHashedPassword() + "\n" +
+                "Date Stored: " + getDateStored() + "\n" +
+                "Notes: " + getNotes() + "\n";
 
     }
 

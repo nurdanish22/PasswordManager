@@ -15,7 +15,7 @@ public class PasswordManager { // Nurdanish (2224875)
         this.hashedMasterPassword = hashPassword(masterPassword);
     }
 
-    private String hashPassword(String password) { // This method is to hash the master password for security. Nurdanish (2224875)
+    static String hashPassword(String password) { // This method is to hash the master password for security. Nurdanish (2224875)
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-512"); //This is the hashing algorithm
             byte[] messageDigest = md.digest(password.getBytes(StandardCharsets.UTF_8)); //This converts the password to bytes and hashes it
@@ -28,6 +28,10 @@ public class PasswordManager { // Nurdanish (2224875)
         } catch (NoSuchAlgorithmException e) { //This is to catch if the algorithm is invalid
             throw new RuntimeException(e);
         }
+    }
+
+    public String getHashedMasterPassword() { // This is to retrieve the hashed master password. Nurdanish (2224875)
+        return hashedMasterPassword;
     }
 
     public void addEntry(PasswordEntry entry) { // This is to add an entry to the passwordEntries ArrayList. Nurdanish (2224875)
